@@ -1,45 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   alphabet.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mhuescar <mhuescar@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/15 20:35:28 by mhuescar          #+#    #+#             */
-/*   Updated: 2025/03/20 12:49:15 by mhuescar         ###   ########.fr       */
+/*   Created: 2025/03/20 13:06:45 by mhuescar          #+#    #+#             */
+/*   Updated: 2025/03/20 13:19:28 by mhuescar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include <unistd.h>
 
-size_t ft_strlen(const char *s)
+void	alphabet(void)
 {
-	size_t	i;
-	i = 0;
+	char c;
+	c = 'a';
 	
-	while(s[i])
-		i++;
-	return (i);
-	
-}
-int	 main (void)
-
-{
-	printf ("%zu\n", ft_strlen ("maricarmen"));
+	while (c <= 'z')
+		write (1, &c, 1);
+		c++;
+		
 return (0);
 }
-
-size_t xtrelen (const char*)
-
-size_t i;
-i = 0;
-
-while (s[i])
-	i++;
-return (i);
-
-
 int main (void)
+{
+alphabet;
+return (0);
 
-printf %zu (xtrelen ("maricarmen"))
-return (0)
+}
